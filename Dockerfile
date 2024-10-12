@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:24.04
 
 EXPOSE 30000
 
@@ -28,5 +28,7 @@ WORKDIR /minetest/games
 RUN git clone https://github.com/VoxeLibre/VoxeLibre
 
 RUN echo "name = Dill" >> VoxeLibre/minetest.conf
+
+RUN echo "default_password = <password>" >> VoxeLibre/minetest.conf
 
 ENTRYPOINT ["sudo", "-u", "root", "/minetest/bin/minetest", "--server", "--gameid", "VoxeLibre", "--world", "/minetest/worlds/world"]
