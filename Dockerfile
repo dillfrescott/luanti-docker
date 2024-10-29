@@ -27,8 +27,6 @@ RUN chmod +x /luanti/bin/luanti
 
 RUN mkdir -p /luanti/games
 
-RUN rm -rf /luanti/games/VoxeLibre
-
 WORKDIR /luanti/games
 
 RUN git clone https://github.com/VoxeLibre/VoxeLibre
