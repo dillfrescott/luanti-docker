@@ -1,8 +1,8 @@
 services:
   minetest:
-    image: xdillfrescott/minetest:latest
+    image: xdillfrescott/luanti:latest
     restart: always
     volumes:
-      - ./world:/minetest/worlds/world
+      - ./world:/luanti/worlds/world
     ports:
       - "30000:30000/udp"
