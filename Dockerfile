@@ -31,4 +31,4 @@ RUN echo "name = Dill" >> VoxeLibre/minetest.conf
 
 RUN echo "default_password = <password>" >> VoxeLibre/minetest.conf
 
-ENTRYPOINT ["sudo", "-u", "root", "/minetest/bin/luanti", "--server", "--gameid", "VoxeLibre", "--world", "/minetest/worlds/world"]
+ENTRYPOINT ["sudo", "-u", "root", "/luanti/bin/luanti", "--server", "--gameid", "VoxeLibre", "--world", "/luanti/worlds/world"]
