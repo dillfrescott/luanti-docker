@@ -1,6 +1,4 @@
-FROM ubuntu:24.04
-
-EXPOSE 30000
+FROM ubuntu:24.04 AS builder
 
 RUN apt update && apt upgrade -y
 
@@ -16,6 +14,14 @@ WORKDIR /luanti
 RUN cmake . -DRUN_IN_PLACE=TRUE
 
 RUN make -j$(nproc)
+
+FROM ubuntu:24.04 AS main
+
+RUN apt update && apt upgrade -y
+
+RUN apt install -y git sudo
+
+COPY --from=builder /luanti /luanti
 
 RUN chmod +x /luanti/bin/luanti
 
