@@ -1,6 +1,7 @@
 services:
-  minetest:
-    image: xdillfrescott/luanti:latest
+  luanti:
+    build:
+      context: .
     restart: always
     volumes:
       - ./world:/luanti/worlds/world
