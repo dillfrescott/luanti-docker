@@ -11,6 +11,9 @@ RUN git clone https://github.com/minetest/minetest /luanti
 
 WORKDIR /luanti
 
+# Version 5.10.0
+RUN git checkout 568f7a8e8fb457c7b7bcfd3211c7f3f0481ed2e7
+
 RUN cmake . -DRUN_IN_PLACE=TRUE
 
 RUN make -j$(nproc)
