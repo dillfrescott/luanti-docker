@@ -7,7 +7,7 @@ libjpeg-dev libgl1-mesa-dev libsqlite3-dev libogg-dev libvorbis-dev \
 libopenal-dev libcurl4-gnutls-dev libfreetype6-dev zlib1g-dev \
 libgmp-dev libjsoncpp-dev libzstd-dev libluajit-5.1-dev gettext libsdl2-dev
 
-RUN git clone https://github.com/minetest/minetest /luanti
+RUN git clone https://github.com/luanti-org/luanti /luanti
 
 WORKDIR /luanti
 
