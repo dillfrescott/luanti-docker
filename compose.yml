@@ -1,6 +1,6 @@
 services:
   luanti:
-    image: xdillfrescott/luanti:latest
+    build: .
     restart: always
     volumes:
       - ./world:/luanti/worlds/world
