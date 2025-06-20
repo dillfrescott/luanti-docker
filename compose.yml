@@ -1,0 +1,8 @@
+services:
+  luanti:
+    build: .
+    restart: always
+    volumes:
+      - ./world:/luanti/worlds/world
+    ports:
+      - "30000:30000/udp"
